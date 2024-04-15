@@ -50,7 +50,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build release archive
         run: |
-          git clone https://git.sr.ht/~soywod/neverest-cli
+          git clone --depth 1 --branch ${{ github.ref_name }} https://git.sr.ht/~soywod/neverest-cli
           cd neverest-cli
           nix build -L .#${{ matrix.target }}
           cd ..
