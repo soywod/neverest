@@ -2,30 +2,22 @@
 
 Thank you for investing your time in contributing to Neverest CLI!
 
-## Development
+As you may have already noticed, Neverest CLI does not use GitHub issues nor pull requests systems. *Why?* Because Neverest CLI supports open source, hence the choice behind [SourceHut](https://git.sr.ht/~soywod/neverest-cli). **You do not require an account on SourceHut to contribute**, you just need an email address, and it is dead simple. Here a short migration guide from GitHub to SourceHut:
 
-The development environment is managed by [Nix](https://nixos.org/download.html). Running `nix-shell` will spawn a shell with everything you need to get started with the lib: `cargo`, `cargo-watch`, `rust-bin`, `rust-analyzer`, `notmuch`…
+## GitHub Discussions
 
-```sh
-# Start a Nix shell
-$ nix-shell
+The equivalent of GitHub Discussions is the **SourceHut mailing list**. You can consult existing messages at <https://lists.sr.ht/~soywod/pimalaya>. You can "open a new discussion" by sending an email at [~soywod/pimalaya@lists.sr.ht](mailto:~soywod/pimalaya@lists.sr.ht). You can also [subscribe](mailto:~soywod/pimalaya+subscribe@lists.sr.ht) and [unsubscribe](mailto:~soywod/pimalaya+unsubscribe@lists.sr.ht) to the mailing list, this way you receive a copy of all discussions.
 
-# then build the CLI
-$ cargo build
+You can also join the [Matrix](https://matrix.org/) chat room [#pimalaya.neverest](https://matrix.to/#/#pimalaya.neverest:matrix.org).
 
-# run the CLI
-$ cargo run --feature pgp-gpg
-```
+## GitHub Issues
 
-## Contributing
+The equivalent of GitHub Issues is the **SourceHut bug tracker**. You can consult existing bugs at <https://todo.sr.ht/~soywod/pimalaya>, and you can "open a new issue" by sending an email at [~soywod/pimalaya@todo.sr.ht](mailto:~soywod/pimalaya@todo.sr.ht).
 
-Neverest CLI supports open-source, hence the choice of using [SourceHut](https://sourcehut.org/) for managing the project. The only reason why the source code is hosted on GitHub is to build releases for all major platforms (using GitHub Actions). Don't worry, contributing on SourceHut is not a big deal: you just need to send emails! You don't need to create any account. Here a small comparison guide with GitHub:
+## GitHub Pull Requests
 
-The equivalent of **GitHub Discussions** are:
+The equivalent of GitHub Pull requests is the **SourceHut mailing list** as well. You can "open a new pull request" by sending an email containing a git patch at [~soywod/pimalaya@lists.sr.ht](mailto:~soywod/pimalaya@lists.sr.ht). The simplest way to send a patch is to use [git send-email](https://git-scm.com/docs/git-send-email), follow [this guide](https://git-send-email.io/) to configure git properly.
 
-- The [Matrix](https://matrix.org/) chat room [#pimalaya.neverest](https://matrix.to/#/#pimalaya.neverest:matrix.org)
-- The SourceHut mailing list. You can consult existing messages [here](https://lists.sr.ht/~soywod/pimalaya). You can "open a new discussion" by sending an email at [~soywod/pimalaya@lists.sr.ht](mailto:~soywod/pimalaya@lists.sr.ht). You can also [subscribe](mailto:~soywod/pimalaya+subscribe@lists.sr.ht) and [unsubscribe](mailto:~soywod/pimalaya+unsubscribe@lists.sr.ht) to the mailing list, so you can receive a copy of all discussions.
+---
 
-The equivalent of **GitHub Issues** is the SourceHut bug tracker. You can consult existing bugs [here](https://todo.sr.ht/~soywod/pimalaya), and you can "open a new issue" by sending an email at [~soywod/pimalaya@todo.sr.ht](mailto:~soywod/pimalaya@todo.sr.ht).
-
-The equivalent of **GitHub Pull requests** is the SourceHut mailing list. You can "open a new pull request" by sending an email containing a git patch at [~soywod/pimalaya@lists.sr.ht](mailto:~soywod/pimalaya@lists.sr.ht). The simplest way to send a patch is to use [git send-email](https://git-scm.com/docs/git-send-email), follow [this guide](https://git-send-email.io/) to configure git properly.
+*Please read the general [contributing guide](https://pimalaya.org/neverest/cli/latest/contributing.html) for more detailed information.*

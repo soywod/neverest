@@ -4,19 +4,25 @@ CLI to synchronize, backup and restore emails, based on [`email-lib`](https://cr
 
 ![screenshot](https://pimalaya.org/neverest/cli/latest/screenshot.jpeg)
 
-*Disclaimer: the project is under active development, do not use in production before the final `v1.0.0`.*
+*The project is under active development, do not use in production before the final `v1.0.0` (or at least do some backups).*
 
 ## Features
 
-- [IMAP](https://pimalaya.org/neverest/cli/latest/configuration/imap.html) support
-- [Maildir](https://pimalaya.org/neverest/cli/latest/configuration/maildir.html) and [Notmuch](https://pimalaya.org/neverest/cli/latest/configuration/notmuch.html) support
-- Synchronization of two backends together (folders and emails)
-- Partial sync based on filters (folders name and envelopes date)
-- Restricted sync based on permissions (folder/flag/message create/update/delete)
+- Backends configuration via interactive [wizard](https://pimalaya.org/neverest/cli/latest/configuration/index.html#automatically-using-the-wizard).
+- Sync pairs of backend together ([IMAP](https://pimalaya.org/neverest/cli/latest/configuration/imap.html), [Maildir](https://pimalaya.org/neverest/cli/latest/configuration/maildir.html) and [Notmuch](https://pimalaya.org/neverest/cli/latest/configuration/notmuch.html) supported).
+- Partial sync based on [filters](https://pimalaya.org/neverest/cli/latest/configuration/index.html#folderfilter) (folder name, envelope date).
+- Restricted sync based on [permissions](https://pimalaya.org/neverest/cli/latest/configuration/index.html#leftrightfolderpermissions) (create/delete folder, update flag, create/update message).
+- Backup and restore using the [Maildir](https://pimalaya.org/neverest/cli/latest/configuration/maildir.html) backend.
+
+*Coming soon:*
+
+- *POP, JMAP and mbox support.*
+- *Editing configuration via wizard.*
+- *Native backup and restore support.*
 
 ## Installation
 
-<table align="center">
+<table>
 <tr>
 <td width="50%">
 <a href="https://repology.org/project/neverest/versions">
@@ -33,7 +39,7 @@ $ cargo install neverest
 $ nix-env -i neverest
 ```
 
-*See the [documentation](https://pimalaya.org/neverest/cli/latest/installation.html) for other installation methods.*
+*Please read the [documentation](https://pimalaya.org/neverest/cli/latest/installation.html) for other installation methods.*
 
 </td>
 </tr>
@@ -41,7 +47,81 @@ $ nix-env -i neverest
 
 ## Configuration
 
-*Please read the [documentation](https://pimalaya.org/neverest/cli/latest/configuration/).*
+Just run `neverest`, the wizard will help you to configure your default account. You can also manually edit your configuration at `~/.config/neverest/config.toml`:
+
+<details>
+  <summary>config.sample.toml</summary>
+
+  ```toml
+  [accounts.example]
+
+  # The current `example` account will be used by default.
+  default = true
+  
+  # Filter folders according to the given rules.
+  #
+  # folder.filter.include = ["INBOX", "Sent"]
+  # folder.filter.exclude = ["All Mails"]
+  folder.filter = "all"
+  
+  # Filter envelopes according to the given rules.
+  #
+  # envelope.filter.before = "1990-12-31T23:59:60Z"
+  # envelope.filter.after = "1990-12-31T23:59:60Z"
+  
+  # The left backend configuration.
+  #
+  # In this example, the left side acts as our local cache.
+  left.backend.type = "maildir"
+  left.backend.root-dir = "/tmp/example"
+  
+  # The left backend permissions.
+  #
+  # Example of a full permissive backend (default behaviour):
+  left.folder.permissions.create = true
+  left.folder.permissions.delete = true
+  left.flag.permissions.update = true
+  left.message.permissions.create = true
+  left.message.permissions.delete = true
+  
+  # The right backend configuration.
+  #
+  # In this example, the right side acts as our remote.
+  right.backend.type = "imap"
+  right.backend.host = "localhost"
+  right.backend.port = 3143
+  right.backend.login = "alice@localhost"
+  
+  # The right backend password.
+  #
+  # right.backend.passwd.cmd = "echo password"
+  # right.backend.passwd.keyring = "password-keyring-entry"
+  right.backend.passwd.raw = "password"
+  
+  # The right backend encryption.
+  #
+  # right.backend.encryption = "tls" # or true
+  # right.backend.encryption = "start-tls"
+  right.backend.encryption = "none" # or false
+  
+  # The right backend permissions.
+  #
+  # In this example, we set up safe permissions by denying deletions
+  # remote side.
+  right.folder.permissions.delete = false
+  right.message.permissions.delete = false
+
+  # The right folder aliases
+  #
+  # In this example, we define custom folder aliases for the right
+  # side. They are useful when you need to map left and right folders
+  # together.
+  right.folder.aliases.inbox = "Inbox"
+  right.folder.aliases.sent = "Sent Mails"
+  ```
+</details>
+
+*Please read the [documentation](https://pimalaya.org/neverest/cli/latest/configuration/) for more detailed information.*
 
 ## Contributing
 
@@ -73,4 +153,3 @@ If you appreciate the project, feel free to donate using one of the following pr
 ---
 
 *This GitHub repository is only used for improving the visibility of the project and for building releases. The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
-
