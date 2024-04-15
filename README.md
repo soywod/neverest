@@ -2,7 +2,7 @@
 
 CLI to synchronize, backup and restore emails, based on [`email-lib`](https://crates.io/crates/email-lib).
 
-*This GitHub repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases). The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
+*⚠️ This repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases), it does not contain any source code. This is not a mirror: real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
 
 ![screenshot](https://pimalaya.org/neverest/cli/latest/screenshot.jpeg)
 
@@ -151,7 +151,3 @@ If you appreciate the project, feel free to donate using one of the following pr
 [![Ko-fi](https://img.shields.io/badge/-Ko--fi-ff5e5a?logo=Ko-fi&logoColor=ffffff)](https://ko-fi.com/soywod)
 [![Buy Me a Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ffdd00?logo=Buy%20Me%20A%20Coffee&logoColor=000000)](https://www.buymeacoffee.com/soywod)
 [![Liberapay](https://img.shields.io/badge/-Liberapay-f6c915?logo=Liberapay&logoColor=222222)](https://liberapay.com/soywod)
-
----
-
-*This GitHub repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases). The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
