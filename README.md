@@ -2,7 +2,7 @@
 
 CLI to synchronize, backup and restore emails, based on [`email-lib`](https://crates.io/crates/email-lib).
 
-*This GitHub repository is only used for improving the visibility of the project and for building releases. The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
+*This GitHub repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases). The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
 
 ![screenshot](https://pimalaya.org/neverest/cli/latest/screenshot.jpeg)
 
@@ -154,4 +154,4 @@ If you appreciate the project, feel free to donate using one of the following pr
 
 ---
 
-*This GitHub repository is only used for improving the visibility of the project and for building releases. The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
+*This GitHub repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases). The real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
