@@ -1,8 +1,27 @@
-# 📫 Neverest CLI [![release](https://img.shields.io/github/v/release/soywod/neverest?color=success)](https://github.com/soywod/neverest/releases/latest) [![chat](https://img.shields.io/matrix/pimalaya.neverest:matrix.org?color=success&label=chat)](https://matrix.to/#/#pimalaya.neverest:matrix.org)
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="center" rowspan="3">
+        <img src="https://git.sr.ht/~soywod/neverest-cli/blob/master/logo.svg" alt="Neverest Logo" width="164" height="164" />
+      </td>
+      <td>
+        <h1>Neverest CLI</h1>
+        <p>
+          CLI to synchronize, backup and restore emails, based on
+          <a href="https://crates.io/crates/email-lib"><code>email-lib</code></a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/soywod/neverest/releases/latest"><img src="https://img.shields.io/github/v/release/soywod/neverest?color=success" alt="release"/></a>
+        <a href="https://matrix.to/#/#pimalaya.neverest:matrix.org"><img src="https://img.shields.io/matrix/pimalaya.neverest:matrix.org?color=success&label=chat" alt="chat"/></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-CLI to synchronize, backup and restore emails, based on [`email-lib`](https://crates.io/crates/email-lib).
-
-*⚠️ This repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases), it does not contain any source code. This is not a mirror: real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
+*⚠️ This repository is only used for improving the visibility of the project and for building [releases](https://github.com/soywod/neverest/releases), it does not contain any source code. **This is not a mirror**: real sources are located on [SourceHut](https://git.sr.ht/~soywod/neverest-cli).*
 
 ![screenshot](https://pimalaya.org/neverest/cli/latest/screenshot.jpeg)
 
